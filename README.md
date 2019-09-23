@@ -1,1 +1,1 @@
-MDK
+# Sandbox Addon Development Kit
