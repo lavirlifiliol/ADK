@@ -15,8 +15,13 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 1, 'seconds'
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     runtime project(':Minecraft')
-    compile 'com.hrznstudio.sandbox:sandbox-api:+'
+    compile 'com.hrznstudio.sandbox:sandbox-api:0.2.+'
 }

@@ -4,7 +4,7 @@ title="Example Addon" # optional DEFAULT: modid
 description="""
 Multiline Description
 """  # optional DEFAULT: ""
-entrypoint="com.hrznstudio.sandbox.example.ExampleMod" # required
+entrypoint="org.sandboxpowered.example.Example" # required
 authors = [ # required 1
     "Author",
 ]
