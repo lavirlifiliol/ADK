@@ -25,3 +25,8 @@ dependencies {
     runtime project(':Minecraft')
     compile 'com.hrznstudio.sandbox:sandbox-api:0.2.+'
 }
+
+jar {
+    from 'LICENSE'
+    archiveExtension = 'sbx'
+}
