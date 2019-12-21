@@ -2,17 +2,14 @@ plugins {
     id 'java'
 }
 
-group 'com.hrznstudio.sandbox'
+group 'org.sandboxpowered.mdk'
 version '1.0.0'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        name 'Horizon Maven'
-        url 'https://cdn.hrzn.studio/maven'
-    }
+    maven { url 'http://maven.sandboxpowered.org' }
 }
 
 configurations.all {
@@ -23,10 +20,10 @@ configurations.all {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     runtime project(':Minecraft')
-    compile 'com.hrznstudio.sandbox:sandbox-api:0.2.+'
+    compile 'org.sandboxpowered:sandbox-api:0.2.+'
 }
 
 jar {
     from 'LICENSE'
-    archiveExtension = 'sbx'
+//    archiveExtension = 'sbx'
 }
