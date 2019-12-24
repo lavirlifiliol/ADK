@@ -17,11 +17,18 @@ repositories {
     maven { url 'http://maven.sandboxpowered.org' }
 }
 
+configurations.all {
+    resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+    resolutionStrategy.cacheChangingModulesFor 1, 'seconds'
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}"
     modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
-    implementation 'org.sandboxpowered:sandbox-fabric:0.2.+'
+    modCompile('org.sandboxpowered:sandbox-fabric:0.2.+:dev'){
+        transitive = false
+    }
     runtime project(':')
 }
 
