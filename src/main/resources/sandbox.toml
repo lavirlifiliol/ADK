@@ -4,7 +4,7 @@ title="Letter Blocks" # optional DEFAULT: modid
 description="""
 Blocks with letters on them
 """  # optional DEFAULT: ""
-entrypoint="lakmatiol.letterblocks.TestMod" # required
+entrypoint="lakmatiol.letterblocks.LetterBlocks" # required
 authors = [ # required 1
     "Lakmatiol",
 ]

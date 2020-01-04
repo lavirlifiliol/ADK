@@ -12,8 +12,8 @@ import org.sandboxpowered.sandbox.api.util.Identity;
 import java.util.HashMap;
 import java.util.function.Supplier;
 
-public class TestMod implements Addon {
-    public static final String MODID = "testmod";
+public class LetterBlocks implements Addon {
+    public static final String MODID = "letterblocks";
 
     private void registerBlock(SandboxAPI api, Identity id, BaseBlock block) {
         api.register(id, block);
@@ -23,6 +23,10 @@ public class TestMod implements Addon {
     @Override
     public void init(SandboxAPI api) {
         Block.Settings common = new Block.Settings(Material.WOOD);
-        registerBlock(api,  Identity.of(MODID, "testblock"), new BaseBlock(common));
+        for(char name = 'a'; name <= 'z'; name++) {
+            registerBlock(api, Identity.of(MODID, String.format("%c_upper", name)), new BaseBlock(common));
+            registerBlock(api, Identity.of(MODID, String.format("%c_lower", name)), new BaseBlock(common));
+
+        }
     }
 }

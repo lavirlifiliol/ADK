@@ -6,9 +6,9 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-archivesBaseName = 'testmod'
+archivesBaseName = 'letterblocks'
 version = 'none'
-group = 'net.testmod'
+group = 'net.letterblocks'
 
 minecraft {
 }
@@ -23,7 +23,7 @@ configurations.all {
 }
 
 dependencies {
-    minecraft "com.mojang:testmod:${project.minecraft_version}"
+    minecraft "com.mojang:letterblocks:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}"
     modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
     modCompile('org.sandboxpowered:sandbox-fabric:0.2.+:dev'){
